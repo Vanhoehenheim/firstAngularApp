@@ -1,0 +1,17 @@
+<div class="d-flex flex-column gap-3 align-items-start">
+  <label for="SingleBinded">Changes Server Name. Does not change if server name changed</label>
+  <input id="SingleBinded" type="text"  placeholder="Enter Server Name" (input) = "updateServerName($event)" />
+  <label for="DoubleBinded">Changes Server Name. Changes if server name changed</label>
+  <input id="DoubleBinded" type="text"  placeholder="Enter Server Name" [(ngModel)] = "serverName" />
+  <label for="serverNameOutput">Server Name Output</label>
+  <p class="border border-primary d-block" style="min-height: 30px; min-width: 100px;" id="serverNameOutput">{{serverName}}</p>
+  <button
+    class="btn btn-primary d-block "
+    [disabled]="!isAllowed"
+    (click)="addNewServer()"
+  >
+    Add new server
+  </button>
+  <p *ngIf="serverStatus">Server {{serverName}} was created.</p>
+  <app-server *ngFor="let server of servers"></app-server>
+</div>
