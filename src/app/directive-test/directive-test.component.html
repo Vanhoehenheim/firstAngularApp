@@ -1,0 +1,19 @@
+<div
+  class="assignment d-flex gap-1 flex-column align-items-start border border-primary p-4 rounded"
+>
+  <button (click)="toggleButton($event)" class="btn btn-info">
+    Display Details
+  </button>
+
+  <p *ngIf="showButton">3rd Assignment. Will be toggled with click of button</p>
+  <h6>Log Of Button Clicks</h6>
+  <!-- <p [textContent]="numberOfClicks.toString()">Log of button clicks</p> -->
+  <div
+    *ngFor="let log of numberOfClicks; let i = index"
+    [ngStyle]="{ background: i > 4 ? 'rgba(1, 79, 255, 0.8)' : 'white' }"
+    [ngClass]="{ 'white-text': i > 4 }"
+  >
+    {{ log }}
+  </div>
+</div>
+<!-- <p>3rd Assignment. Will be toggled with click of button</p> -->

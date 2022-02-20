@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
+import { DirectiveTestComponent } from './directive-test/directive-test.component';
 // import { SuccessComponent } from './successAlert/success.component';
 // import { WarningComponent } from './warningAlert/warning.component';
 
@@ -15,6 +16,7 @@ import { ServersComponent } from './servers/servers.component';
     AppComponent,
     ServerComponent,
     ServersComponent,
+    DirectiveTestComponent,
     // SuccessComponent,
     // WarningComponent
   ],
